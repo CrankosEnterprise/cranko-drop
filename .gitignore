@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production builds and packaging
+dist/
+dist-electron/
+release/
+build/
+win-unpacked/
+*.blockmap
+latest*.yml
+
+# Binaries and executables (obtained via scripts/download-binaries.mjs)
+bin/
+*.exe
+*.dll
+*.node
+*.dylib
+*.so
+
+# Packages and archives
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+*.dmg
+*.pkg
+*.appimage
+*.deb
+*.rpm
+
+# Test and temporary files
+test-downloads/
+*.tmp
+*.cranko.tmp
+*.part
+*.aria2
+
+# Logs and debug
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment and local configs
+.env
+.env.local
+.env.*.local
+*.local
+
+# Editor and OS files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,55 @@
+/**
+ * @type {import('electron-builder').Configuration}
+ * @see https://www.electron.build/configuration/configuration
+ */
+{
+  "appId": "com.crankodrop.app",
+  "productName": "Cranko Drop",
+  "directories": {
+    "output": "release/${version}"
+  },
+  "files": [
+    "dist",
+    "dist-electron"
+  ],
+  "extraResources": [
+    {
+      "from": "bin",
+      "to": "bin",
+      "filter": ["**/*"]
+    }
+  ],
+  "asarUnpack": [
+    "bin/**/*"
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "sign": null,
+    "signAndEditExecutable": false
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": "always",
+    "createStartMenuShortcut": true,
+    "shortcutName": "Cranko Drop",
+    "uninstallDisplayName": "Cranko Drop"
+  },
+  "linux": {
+    "target": [
+      "AppImage",
+      "deb"
+    ],
+    "category": "Network;Utility"
+  }
+}
